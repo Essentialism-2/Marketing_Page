@@ -1,0 +1,36 @@
+.navbar {
+    height: 60px;
+    .flex();
+    ul {
+        width: 100%;
+        .flex();
+        li{
+            img {
+                width: 25px;
+            }
+
+            a {
+                color:@black;
+                text-decoration: none;
+                font-family: @font-family;
+            }
+
+            & + li {
+                margin-left: 25px;
+            }
+            
+            &:nth-child(1){
+                span {
+                    .flex;
+                }
+                a {
+                    font-size: 1.5rem;
+                }
+            }
+            
+            &:nth-child(3){
+                margin-right: auto;
+            }
+        }
+    }
+}

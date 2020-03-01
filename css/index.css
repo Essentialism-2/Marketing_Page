@@ -140,3 +140,53 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", arial;
+}
+html,
+body {
+  width: 100%;
+}
+.container {
+  width: 90vw;
+  height: 150px;
+  margin: 0 auto;
+}
+.navbar {
+  height: 60px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.navbar ul {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.navbar ul li img {
+  width: 25px;
+}
+.navbar ul li a {
+  color: #656565;
+  text-decoration: none;
+  font-family: "Roboto", arial;
+}
+.navbar ul li + li {
+  margin-left: 25px;
+}
+.navbar ul li:nth-child(1) span {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.navbar ul li:nth-child(1) a {
+  font-size: 1.5rem;
+}
+.navbar ul li:nth-child(3) {
+  margin-right: auto;
+}
