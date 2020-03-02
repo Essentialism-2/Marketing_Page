@@ -149,7 +149,7 @@ body {
   width: 100%;
 }
 .container {
-  width: 90vw;
+  width: 85vw;
   height: 150px;
   margin: 0 auto;
 }
@@ -167,16 +167,10 @@ body {
   justify-content: center;
   align-items: center;
 }
-.navbar ul li img {
-  width: 25px;
-}
 .navbar ul li a {
   color: #656565;
   text-decoration: none;
   font-family: "Roboto", arial;
-}
-.navbar ul li + li {
-  margin-left: 25px;
 }
 .navbar ul li:nth-child(1) span {
   display: flex;
@@ -186,7 +180,21 @@ body {
 }
 .navbar ul li:nth-child(1) a {
   font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar ul li:nth-child(1) img {
+  width: 25px;
+}
+.navbar ul li:not(:nth-child(1)) {
+  font-size: 0.8rem;
 }
 .navbar ul li:nth-child(3) {
   margin-right: auto;
+}
+.navbar ul li:nth-child(4) a,
+.navbar ul li:nth-child(5) a {
+  font-weight: bold;
+}
+.navbar ul li + li {
+  margin-left: 25px;
 }

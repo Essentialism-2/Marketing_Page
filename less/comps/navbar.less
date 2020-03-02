@@ -4,32 +4,43 @@
     ul {
         width: 100%;
         .flex();
-        li{
-            img {
-                width: 25px;
-            }
-
+        li {
+            // All <a>
             a {
                 color:@black;
                 text-decoration: none;
                 font-family: @font-family;
             }
-
-            & + li {
-                margin-left: 25px;
-            }
             
+            // First LI
             &:nth-child(1){
                 span {
                     .flex;
                 }
                 a {
                     font-size: 1.5rem;
+                    font-weight: bold;
+                }
+                img {
+                    width: 25px;
                 }
             }
-            
+
+            // Everything but the first LI
+            &:not(:nth-child(1)){
+                font-size: .8rem;
+            }
+            // Third LI
             &:nth-child(3){
                 margin-right: auto;
+            }
+            // Fourth and Fifth LI
+            &:nth-child(4), &:nth-child(5){
+                a { font-weight: bold; }
+            }
+            // Every LI that has an LI before it.
+            & + li {
+                margin-left: 25px;
             }
         }
     }
