@@ -1,0 +1,23 @@
+.cards {
+    .flex(@jc: space-between);
+    margin-top: 25px;
+}
+
+.card {
+    flex-basis: 32%;
+
+    &_top {
+        height: 150px;
+        background: @blue;
+        .flex();
+    }
+
+    &_bottom {
+        padding: 4%;
+        background: @gray;
+
+        h2 {
+            margin-bottom: 15px;
+        }
+    }
+}

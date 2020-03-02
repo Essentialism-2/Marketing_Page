@@ -259,3 +259,34 @@ body {
   left: -50px;
   width: 90%;
 }
+.what {
+  margin: 60px 0;
+}
+.what h1 {
+  font-size: 2rem;
+}
+.cards {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+.card {
+  flex-basis: 32%;
+}
+.card_top {
+  height: 150px;
+  background: #38b4e2;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.card_bottom {
+  padding: 4%;
+  background: #f7f7f7;
+}
+.card_bottom h2 {
+  margin-bottom: 15px;
+}
