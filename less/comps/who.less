@@ -4,10 +4,49 @@
 
     &_cards {
         &_card-1 {
-            img {
-                visibility: hidden;
-                width: 1px; height: 1px;
+            &_top{
+                background: url("../../assets/bteague.png") center center no-repeat, @black;
+                background-size: contain;
             }
+        }
+        &_card-2 {
+            flex-grow: 1;
+            flex-basis: 60%;
+            &_top {
+                h1 {
+                    font-size: 2rem;
+                    color: @white;
+                }
+            }
+        }
+        &_card-3 {
+            margin-left: 0 !important;
+            &_top{
+                background: url("../../assets/abesse.png") center center no-repeat, @black;
+                background-size: contain;
+            }
+        }
+        &_card-4 {
+            &_top{
+                background: url("../../assets/zstack.jpeg") center center no-repeat, @black;
+                background-size: contain;
+            }
+        }
+        &_card-5 {
+            &_top{
+                background: url("../../assets/thannam.jpeg") center center no-repeat, @black;
+                background-size: contain;
+            }
+        }
+        &_card-6 {
+            &_top{
+                background: url("../../assets/stompke.jpeg") center center no-repeat, @black;
+                background-size: contain;
+            }
+        }
+
+        &_card-3, &_card-4, &_card-5, &_card-6 {
+            flex-basis: 24%;
         }
     }
 }
