@@ -427,9 +427,6 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.card_bottom h2 {
-  align-self: flex-start;
-}
 .card_bottom.who_cards_card_bottom p,
 .card_bottom.who_cards_card_bottom a {
   width: 100%;
