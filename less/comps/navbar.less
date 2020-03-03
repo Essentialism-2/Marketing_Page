@@ -1,46 +1,98 @@
 .navbar {
-    height: 60px;
-    .flex();
-    ul {
-        width: 100%;
-        .flex();
-        li {
-            // All <a>
-            a {
-                color:@black;
-                text-decoration: none;
-                font-family: @font-family;
-            }
-            
-            // First LI
-            &:nth-child(1){
-                span {
-                    .flex;
-                }
-                a {
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                }
-                img {
-                    width: 25px;
-                }
+    &_desktop {
+        height: 60px;
+        display: none;
+        
+        @media @tablet {
+            .flex();
+        }
+
+        div {
+            width: auto;
+            .flex();
+
+            h1{
+                font-size: 2rem;
             }
 
-            // Everything but the first LI
-            &:not(:nth-child(1)){
-                font-size: .8rem;
+            h1, svg path, svg circle {
+                fill: @main-bg;
+                color: @main-bg;
             }
-            // Third LI
-            &:nth-child(3){
-                margin-right: auto;
+
+            svg {
+                width: 30px;
             }
-            // Fourth and Fifth LI
-            &:nth-child(4), &:nth-child(5){
-                a { font-weight: bold; }
+        }
+
+        ul {
+            flex-grow: 1;
+            .flex(@jc: flex-start);
+            margin-left: 15px;
+
+            li {
+                & + li {
+                    margin-left: 15px;
+                }
+
+                &:nth-of-type(2) {
+                    margin-right: auto;
+                }
+
+                &:nth-child(1n + 3) a {
+                    font-weight: bold;
+                }
+
+                a {
+                    color: @black;
+                    text-decoration: none;
+                }
             }
-            // Every LI that has an LI before it.
-            & + li {
-                margin-left: 25px;
+        }
+
+    }
+    &_mobile {        
+        background: @main-bg;
+        padding: 10px 0;
+        .flex(@dir: column);
+        
+        @media @tablet {
+            display:none;
+        }
+
+        &_heading {
+            .flex();
+
+            h1{
+                font-size: 1.4rem;
+                color:@white;
+            }
+
+            svg {
+                path, circle {
+                    fill: @white;
+                }
+                width: 30px;
+            }
+        }
+
+        &_list {
+            width: 90%;
+            ul {
+                .flex(@jc:space-between);
+
+                div li:nth-of-type(2) {
+                    margin-top: 10px;
+                }
+
+                div:last-of-type li {
+                    font-weight: bold;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: @white;
+                }
             }
         }
     }
