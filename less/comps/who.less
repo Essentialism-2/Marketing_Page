@@ -1,17 +1,21 @@
 .who {
     width: 95vw;
-    margin: 0 auto;
+    margin: 0 auto 50px;
 
     &_cards {
+        @media @tablet {
+            .flex(@jc:space-between, @wrap: wrap);
+        }
         &_card-1 {
             &_top{
-                background: url("../../assets/bteague.png") center center no-repeat, @black;
+                background: url("../../assets/bteague.png") center center no-repeat, @gray;
                 background-size: contain;
             }
         }
         &_card-2 {
-            flex-grow: 1;
-            flex-basis: 60%;
+            &_bottom {
+                height: 110px;
+            }
             &_top {
                 h1 {
                     font-size: 2rem;
@@ -22,31 +26,70 @@
         &_card-3 {
             margin-left: 0 !important;
             &_top{
-                background: url("../../assets/abesse.png") center center no-repeat, @black;
+                background: url("../../assets/abesse.png") center center no-repeat, @gray;
                 background-size: contain;
             }
         }
         &_card-4 {
             &_top{
-                background: url("../../assets/zstack.jpeg") center center no-repeat, @black;
+                background: url("../../assets/zstack.jpeg") center center no-repeat, @gray;
                 background-size: contain;
             }
         }
         &_card-5 {
             &_top{
-                background: url("../../assets/thannam.jpeg") center center no-repeat, @black;
+                background: url("../../assets/thannam.jpeg") center center no-repeat, @gray;
                 background-size: contain;
             }
         }
         &_card-6 {
             &_top{
-                background: url("../../assets/stompke.jpeg") center center no-repeat, @black;
+                background: url("../../assets/stompke.jpeg") center center no-repeat, @gray;
                 background-size: contain;
             }
         }
 
-        &_card-3, &_card-4, &_card-5, &_card-6 {
-            flex-basis: 24%;
+        &_card-1.card, &_card-3.card, &_card-4.card, &_card-5.card, &_card-6.card {
+                padding-top: 10px;
+                background: @gray;
+        }
+
+        @media @mobile {
+            &_card-1.card, &_card-2.card, &_card-3.card, &_card-4.card, &_card-5.card, &_card-6.card {
+                flex-basis: 100%;
+                width: 100%;
+                margin-left: 0;
+            }
+
+            &_card-2.card {
+                order: -1;
+            }
+        }
+
+        @media @tablet {
+            &_card-2.card {
+                h1 {
+                    font-size: 3vw;
+                }
+            }
+
+            &_card-1.card, &_card-2.card, &_card-3.card, &_card-4.card, &_card-5.card, &_card-6.card {
+                flex-basis: 48%;
+            }
+
+            &_card-1 {
+                order: -1;
+            }
+        }
+
+
+
+        @media @laptop {
+            &_card-2.card {
+                h1 {
+                    font-size: 2rem;
+                }
+            }
         }
     }
 }

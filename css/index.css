@@ -342,7 +342,7 @@ body {
   width: 50px;
 }
 .header_meet {
-  width: 95vw;
+  width: 100vw;
   height: 60px;
   background: #38b4e2;
   margin: 0 auto;
@@ -352,8 +352,16 @@ body {
   align-items: center;
 }
 .header_meet h1 {
-  font-size: 2rem;
+  font-size: 5vw;
   color: #FFF;
+}
+@media (min-width: 768px) {
+  .header_meet {
+    width: 95vw;
+  }
+  .header_meet h1 {
+    font-size: 2rem;
+  }
 }
 .what {
   width: 95vw;
@@ -437,15 +445,22 @@ body {
 }
 .who {
   width: 95vw;
-  margin: 0 auto;
+  margin: 0 auto 50px;
+}
+@media (min-width: 768px) {
+  .who_cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .who_cards_card-1_top {
-  background: url("../../assets/bteague.png") center center no-repeat, #656565;
+  background: url("../../assets/bteague.png") center center no-repeat, #f7f7f7;
   background-size: contain;
 }
-.who_cards_card-2 {
-  flex-grow: 1;
-  flex-basis: 60%;
+.who_cards_card-2_bottom {
+  height: 110px;
 }
 .who_cards_card-2_top h1 {
   font-size: 2rem;
@@ -455,29 +470,67 @@ body {
   margin-left: 0 !important;
 }
 .who_cards_card-3_top {
-  background: url("../../assets/abesse.png") center center no-repeat, #656565;
+  background: url("../../assets/abesse.png") center center no-repeat, #f7f7f7;
   background-size: contain;
 }
 .who_cards_card-4_top {
-  background: url("../../assets/zstack.jpeg") center center no-repeat, #656565;
+  background: url("../../assets/zstack.jpeg") center center no-repeat, #f7f7f7;
   background-size: contain;
 }
 .who_cards_card-5_top {
-  background: url("../../assets/thannam.jpeg") center center no-repeat, #656565;
+  background: url("../../assets/thannam.jpeg") center center no-repeat, #f7f7f7;
   background-size: contain;
 }
 .who_cards_card-6_top {
-  background: url("../../assets/stompke.jpeg") center center no-repeat, #656565;
+  background: url("../../assets/stompke.jpeg") center center no-repeat, #f7f7f7;
   background-size: contain;
 }
-.who_cards_card-3,
-.who_cards_card-4,
-.who_cards_card-5,
-.who_cards_card-6 {
-  flex-basis: 24%;
+.who_cards_card-1.card,
+.who_cards_card-3.card,
+.who_cards_card-4.card,
+.who_cards_card-5.card,
+.who_cards_card-6.card {
+  padding-top: 10px;
+  background: #f7f7f7;
+}
+@media (min-width: 425px) {
+  .who_cards_card-1.card,
+  .who_cards_card-2.card,
+  .who_cards_card-3.card,
+  .who_cards_card-4.card,
+  .who_cards_card-5.card,
+  .who_cards_card-6.card {
+    flex-basis: 100%;
+    width: 100%;
+    margin-left: 0;
+  }
+  .who_cards_card-2.card {
+    order: -1;
+  }
+}
+@media (min-width: 768px) {
+  .who_cards_card-2.card h1 {
+    font-size: 3vw;
+  }
+  .who_cards_card-1.card,
+  .who_cards_card-2.card,
+  .who_cards_card-3.card,
+  .who_cards_card-4.card,
+  .who_cards_card-5.card,
+  .who_cards_card-6.card {
+    flex-basis: 48%;
+  }
+  .who_cards_card-1 {
+    order: -1;
+  }
+}
+@media (min-width: 1024px) {
+  .who_cards_card-2.card h1 {
+    font-size: 2rem;
+  }
 }
 footer {
-  width: 100%;
+  width: 100vw;
   height: 60px;
   background: #38b4e2;
   display: flex;
@@ -486,10 +539,11 @@ footer {
   align-items: center;
   padding: 0 2%;
 }
-footer.stick {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+@media (min-width: 768px) {
+  footer {
+    width: 95vw;
+    margin: 0 auto;
+  }
 }
 footer p {
   color: #FFF;

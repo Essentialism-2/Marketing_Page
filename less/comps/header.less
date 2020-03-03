@@ -5,7 +5,7 @@
     justify-items: center;
     align-items: center;
 
-    background: @blue;
+    background: @main-bg;
     padding: 15px;
 
     @media @tablet {
@@ -79,14 +79,22 @@
     }
 
     &_meet {
-        width: 95vw; height: 60px;
+        width: 100vw; height: 60px;
         background: @main-bg;
         margin: 0 auto;
+
         .flex();
 
         h1{
-            font-size: 2rem;
+            font-size: 5vw;
             color: @white;
+        }
+
+        @media @tablet {
+            width: 95vw;
+            h1 {
+                font-size: 2rem;
+            }
         }
     }
 }
