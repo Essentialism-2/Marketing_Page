@@ -1,0 +1,13 @@
+// Mixins in here
+.flex(@dir: row, @wrap: nowrap, @jc: center, @ai: center){
+    display: flex;
+    flex-flow: @dir @wrap;
+    justify-content: @jc;
+    align-items: @ai;
+}
+
+.grid(@temp, @areas){ 
+    display:grid;
+    grid-template: @temp;
+    grid-template-areas: @areas;
+}

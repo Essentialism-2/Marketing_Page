@@ -1,0 +1,40 @@
+.cards {
+    .flex(@dir: column);
+    @media @tablet {
+        .flex(@dir:row, @wrap: wrap);
+    }
+}
+
+.card {
+    flex-basis: 100%;
+    margin-top: 20px;
+
+    @media @tablet {
+        flex-basis: 49%;
+        &:not(:first-of-type){
+            margin-left: 1%;
+        }
+    }
+
+    @media @laptop {
+        flex-basis: 32%;
+        &:not(:first-of-type){
+            margin-left: 1%;
+        }
+    }
+
+    &_top {
+        height: 150px;
+        background: @main-bg;
+        .flex();
+    }
+
+    &_bottom {
+        padding: 4%;
+        background: @gray;
+
+        h2 {
+            margin-bottom: 15px;
+        }
+    }
+}

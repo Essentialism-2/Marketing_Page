@@ -1,0 +1,92 @@
+.header {
+    display: grid;
+    grid-template: auto auto / auto;
+    grid-template-areas: "top" "bottom";
+    justify-items: center;
+    align-items: center;
+
+    background: @blue;
+    padding: 15px;
+
+    @media @tablet {
+        .flex(@jc: space-between);
+    }
+
+    &_left {
+        grid-area: top;
+        
+        @media @laptop {
+            h1, p, a {
+                margin-left: 3vw !important;
+            }
+        }
+        
+        h1, p {
+            color: @white;
+        }
+
+        h1 {
+            font-size: 2rem;
+
+            @media @laptop {
+                font-size: 3vw;
+            }
+        }
+
+        p {
+            margin: 15px 0;
+
+            @media @laptop {
+                font-size: 1.5vw;
+            }
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: @white;
+            color: @main-bg;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+
+    &_right {
+        grid-area: bottom;
+        margin-top: -20px;
+
+        &_image {
+            background: url('../../assets/redshirtman.jpeg') center center no-repeat;
+            background-size: cover;
+            width: 60vw;
+            height: 60vw;
+            position: relative;
+            top: 50px;
+            max-width: 600px;
+            max-height: 600px;
+
+            @media @laptop {
+                right: 3vw;
+            }
+            img {
+                visibility: hidden;
+                width: 1px; height: 1px;
+            }
+        }
+    }
+    img {
+        width: 50px;
+    }
+
+    &_meet {
+        width: 95vw; height: 60px;
+        background: @main-bg;
+        margin: 0 auto;
+        .flex();
+
+        h1{
+            font-size: 2rem;
+            color: @white;
+        }
+    }
+}
