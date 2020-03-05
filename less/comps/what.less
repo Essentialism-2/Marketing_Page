@@ -4,4 +4,20 @@
     h1 {
         font-size: 2rem;
     }
+
+    &_cards_card {
+        &-3 {
+            &_bottom.what_cards_card_bottom {
+                @media @laptop {
+                    height: 157px;
+                }
+
+                @media @laptop-large {
+                    height: 125px;
+                }
+
+                justify-content: flex-start;
+            }
+        }
+    }
 }

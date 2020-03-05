@@ -8,7 +8,8 @@
 .card {
     flex-basis: 100%;
     margin-top: 20px;
-    height: 250px;
+    height: auto;
+    min-height: 300px;
 
     @media @tablet {
         flex-basis: 49%;
@@ -36,13 +37,13 @@
     }
 
     &_bottom {
-        height: 100px;
+        height: auto;
         padding: 15px;
         background: @gray;
 
         .flex(@dir: column, @jc: space-between);
 
-        &.who_cards_card_bottom h2 {
+        &.who_cards_card_bottom h2, &.what_cards_card_bottom h2 {
             margin-bottom: 15px;
         }
         &.who_cards_card_bottom a {
